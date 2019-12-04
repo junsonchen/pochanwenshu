@@ -95,5 +95,6 @@ class RedisPipeline(object):
             results = item.get('name')
             self.client.sadd('court:name', results)  # 淘宝拍卖法院名称
             # for i in results:
-            #     # self.client.rpush('court:name', i)  # 存list
+            #     # print(i)
+            # #     # self.client.rpush('court:name', i)  # 存list
             #     self.client.sadd('court:name', i)  # 存集合，去重

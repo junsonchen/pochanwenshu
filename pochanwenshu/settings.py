@@ -17,9 +17,10 @@ ROBOTSTXT_OBEY = False
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 redis 运行数据缓存端口参数
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-REDIS_HOST = '127.0.0.1'
+# REDIS_HOST = '127.0.0.1'
+REDIS_HOST = '114.115.201.98'
 REDIS_PORT = 6379
-REDIS_PASSWORD = ''
+REDIS_PASSWORD = 'axy@2019'
 REDIS_DB = 3
 # 指定 redis链接密码，和使用哪一个数据库,可以在scrapy_redis里面的defults文件查看
 REDIS_PARAMS = {
@@ -44,7 +45,8 @@ INDEX_TYPE = 'xzcf'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 redis 代理池配置参数
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-REDIS_PROXIES_HOST = '127.0.0.1'
+# REDIS_PROXIES_HOST = '127.0.0.1'
+REDIS_PROXIES_HOST = '117.78.35.12'
 REDIS_PROXIES_PORT = 6379
 REDIS_PROXIES_PASSWORD = ''
 REDIS_PROXIES_DB = 15

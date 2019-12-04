@@ -17,16 +17,9 @@ class RealCourtSpider(scrapy.Spider):
             'pochanwenshu.middlewares.MyRtryMiddlerware': 95,
         },
         "ITEM_PIPELINES": {
-            'pochanwenshu.pipelines.PochanwenshuPipeline': 150,
-            # 'pochanwenshu.pipelines.MongoPipeline': 180,
-            # 'pochanwenshu.pipelines.Save2eEsPipeline': 180,
             'pochanwenshu.pipelines.RedisPipeline': 180,
             # 'scrapy_redis.pipelines.RedisPipeline':180,
         },
-        "SCHEDULER": "scrapy_redis.scheduler.Scheduler",
-        "DUPEFILTER_CLASS": "scrapy_redis.dupefilter.RFPDupeFilter",
-        "SCHEDULER_QUEUE_CLASS": "scrapy_redis.queue.SpiderPriorityQueue",
-        "SCHEDULER_PERSIST": True,
 
         "REDIRECT_ENABLED": False,
         'COOKIES_ENABLED': False,
@@ -61,5 +54,5 @@ class RealCourtSpider(scrapy.Spider):
             url = fid2_url_list + base_data_url_list
             item['name'] = name
             item['url'] = url
-            print(item)
-            # yield item
+            # print(item)
+            yield item
